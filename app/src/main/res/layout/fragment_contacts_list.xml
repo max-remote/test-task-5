@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/contactListFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/list_margin"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/firstUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_horizontal_cl_list"
+        android:layout_marginVertical="@dimen/margin_vertical_cl_list"
+        android:background="@drawable/items_back"
+        android:elevation="@dimen/elevation_list"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/firstUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_name"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Пользователь Первый" />
+
+        <TextView
+            android:id="@+id/firstUserSurName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_surname"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/firstUserName"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Пользовательский" />
+
+        <TextView
+            android:id="@+id/firstUserNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_phone"
+            android:textStyle="italic|bold"
+            app:layout_constraintStart_toStartOf="@+id/firstUserName"
+            app:layout_constraintTop_toBottomOf="@+id/firstUserName"
+            tool:text="89998887766" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/secondUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_horizontal_cl_list"
+        android:layout_marginVertical="@dimen/margin_vertical_cl_list"
+        android:background="@drawable/items_back"
+        android:elevation="@dimen/elevation_list"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/secondUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_name"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Пользователь Второй " />
+
+        <TextView
+            android:id="@+id/secondUserSurName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_surname"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/secondUserName"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Пользовательский" />
+
+        <TextView
+            android:id="@+id/secondUserNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_phone"
+            android:textStyle="italic|bold"
+            app:layout_constraintStart_toStartOf="@+id/secondUserName"
+            app:layout_constraintTop_toBottomOf="@+id/secondUserName"
+            tool:text="89998887766" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/thirdUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_horizontal_cl_list"
+        android:layout_marginVertical="@dimen/margin_vertical_cl_list"
+        android:background="@drawable/items_back"
+        android:elevation="@dimen/elevation_list"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/thirdUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_name"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Пользователь Третий" />
+
+        <TextView
+            android:id="@+id/thirdUserSurName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_surname"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/thirdUserName"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Пользовательский" />
+
+        <TextView
+            android:id="@+id/thirdUserNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_phone"
+            android:textStyle="italic|bold"
+            app:layout_constraintStart_toStartOf="@+id/thirdUserName"
+            app:layout_constraintTop_toBottomOf="@+id/thirdUserName"
+            tool:text="89998887766" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fourthUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_horizontal_cl_list"
+        android:layout_marginVertical="@dimen/margin_vertical_cl_list"
+        android:background="@drawable/items_back"
+        android:elevation="@dimen/elevation_list"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/fourthUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_name"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Пользователь Четвертый" />
+
+        <TextView
+            android:id="@+id/fourthUserSurName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_surname"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/fourthUserName"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Пользовательский" />
+
+        <TextView
+            android:id="@+id/fourthUserNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_phone"
+            android:textStyle="italic|bold"
+            app:layout_constraintStart_toStartOf="@+id/fourthUserName"
+            app:layout_constraintTop_toBottomOf="@+id/fourthUserName"
+            tool:text="89998887766" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
