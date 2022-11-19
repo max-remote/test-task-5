@@ -1,5 +1,7 @@
 package com.maks.maxtask5.ui
 
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -77,13 +79,23 @@ class ContactsListFragment : Fragment() {
     }
 
     private fun setOnClickListener(i: Int) {
-        requireActivity().supportFragmentManager.beginTransaction()
-            .addToBackStack(null)
-            .replace(
-                R.id.container,
-                ContactDetailsFragment.newInstance(i)
-            )
-            .commit()
+        if(isTablet(requireContext())){
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.container_details, ContactDetailsFragment.newInstance(i))
+                .addToBackStack("")
+                .commit()
+        }else{
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.container, ContactDetailsFragment.newInstance(i))
+                .addToBackStack(null)
+                .commit()
+        }
+    }
+
+    private fun isTablet(context: Context): Boolean {
+        return ((context.resources.configuration.screenLayout
+                and Configuration.SCREENLAYOUT_SIZE_MASK)
+                >= Configuration.SCREENLAYOUT_SIZE_LARGE)
     }
 
     companion object {
