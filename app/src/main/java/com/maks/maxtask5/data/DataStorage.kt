@@ -2,7 +2,7 @@ package com.maks.maxtask5.data
 
 import com.maks.maxtask5.data.entity.Contact
 
-class ContactsDataSource {
+class DataStorage {
     fun getContacts(): MutableList<Contact> {
         return mutableListOf(
             Contact("Vasya", "Ivanov", "+79998887766"),

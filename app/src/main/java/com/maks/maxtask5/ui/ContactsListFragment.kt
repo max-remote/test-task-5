@@ -20,7 +20,7 @@ class ContactsListFragment : Fragment() {
     private val names = mutableListOf<TextView>()
     private val sureNames = mutableListOf<TextView>()
     private val numbers = mutableListOf<TextView>()
-    private val tvContacts = mutableListOf<ConstraintLayout>()
+    private val itemsContact = mutableListOf<ConstraintLayout>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -31,18 +31,15 @@ class ContactsListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         addViews()
         fillContacts()
-        setOnClickListeners()
+        setOnItemsClickListeners()
     }
     private fun fillContacts() {
-        var i = 0
-        for (contact in (requireActivity() as MainActivity).contacts) {
+        for ((i, contact) in (requireActivity() as MainActivity).contacts.withIndex()) {
             names[i].text = contact.firstName
             sureNames[i].text = contact.surName
             numbers[i].text = contact.phoneNumber
-            i++
         }
     }
     private fun addViews() = with(binding) {
@@ -64,21 +61,21 @@ class ContactsListFragment : Fragment() {
         numbers.add(thirdUserNumber)
         numbers.add(fourthUserNumber)
 
-        tvContacts.clear()
-        tvContacts.add(firstUser)
-        tvContacts.add(secondUser)
-        tvContacts.add(thirdUser)
-        tvContacts.add(fourthUser)
+        itemsContact.clear()
+        itemsContact.add(firstUser)
+        itemsContact.add(secondUser)
+        itemsContact.add(thirdUser)
+        itemsContact.add(fourthUser)
        }
 
-    private fun setOnClickListeners() {
-        tvContacts[0].setOnClickListener { setOnClickListener(0) }
-        tvContacts[1].setOnClickListener { setOnClickListener(1) }
-        tvContacts[2].setOnClickListener { setOnClickListener(2) }
-        tvContacts[3].setOnClickListener { setOnClickListener(3) }
+    private fun setOnItemsClickListeners() {
+        itemsContact[0].setOnClickListener { openDetailsFragment(0) }
+        itemsContact[1].setOnClickListener { openDetailsFragment(1) }
+        itemsContact[2].setOnClickListener { openDetailsFragment(2) }
+        itemsContact[3].setOnClickListener { openDetailsFragment(3) }
     }
 
-    private fun setOnClickListener(i: Int) {
+    private fun openDetailsFragment(i: Int) {
         if(isTablet(requireContext())){
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.container_details, ContactDetailsFragment.newInstance(i))

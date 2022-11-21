@@ -40,7 +40,6 @@ class ContactDetailsFragment : Fragment() {
 
     private fun clickOnSaveBtn() = with(binding) {
         btnSave.setOnClickListener {
-
             requireActivity().supportFragmentManager.popBackStack()
             requireActivity().supportFragmentManager
                 .beginTransaction()
